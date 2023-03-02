@@ -4,6 +4,12 @@
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
+    <%= f.text_field :first_name, autofocus: true, autocomplete: "first_name",placeholder: 'First Name',class:"w-50 p-2 max-width: 100% border-0 shadow-lg p-3 mb-4 bg-white bg-light rounded-pill" %>
+  </div>
+  <div class="field">
+    <%= f.text_field :last_name, autofocus: true, autocomplete: "last_name",placeholder: 'Last Name',class:"w-50 p-2 max-width: 100% border-0 shadow-lg p-3 mb-4 bg-white bg-light rounded-pill" %>
+  </div>
+  <div class="field">
     <%= f.email_field :email, autofocus: true, autocomplete: "email",placeholder: 'EMAIL',class:"w-50 p-2 max-width: 100% border-0 shadow-lg p-3 mb-4 bg-white bg-light rounded-pill" %>
   </div>
 
