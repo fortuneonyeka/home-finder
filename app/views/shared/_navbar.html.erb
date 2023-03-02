@@ -29,14 +29,20 @@
         <li class="nav-item">
           <a class="nav-link">Advertising</a>
         </li>
+         <% if account_signed_in? %>
         
-        <li class="nav-item  ">
+         <li class="nav-item mt-2 mx-2 text-capitalize">
+          <strong><%= current_account.first_name %></strong>
+      </li>
+    
+    <span class="navbar-text">
+      <%= button_to "LogOut", destroy_account_session_path, method: :delete, :class => "border-0 bg-transparent" %>
+    </span>
+    <% else%>
+    <li class="nav-item  ">
           <%= link_to "Sign In", new_account_session_path, class: "nav-link"%>
         </li>
-        <li class="nav-item">
-          <%= link_to "Sign Up", new_account_registration_path, class: "nav-link"%>
-
-        </li>
+    <% end %>
       </ul>
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
