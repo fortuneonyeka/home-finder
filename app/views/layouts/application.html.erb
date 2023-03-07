@@ -18,8 +18,14 @@
   </head>
 
   <body>
-  
+  <% if ["public", "devise"].include?(controller.controller_name) %>
+    <header>
   <%= render "shared/navbar" %>
+  </header>
+  <% else%>
+  <h1 class="container text-center mt-4">Dashboard</h1>
+  <%= render "shared/dashboard-nav" %>
+  <% end %>
  
 <div class="container">
    <% if notice %>
