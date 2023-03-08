@@ -1,6 +1,6 @@
 <p style="color: green"><%= notice %></p>
-
-<h1>Properties</h1>
+<div class="property-index">
+<h1 class="mt-4">Properties</h1>
 
 <div id="properties">
   <% @properties.each do |property| %>
@@ -9,6 +9,7 @@
       <%= link_to "Show this property", property %>
     </p>
   <% end %>
+</div>
 </div>
 
 <%= link_to "New property", new_property_path %>
