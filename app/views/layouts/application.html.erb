@@ -18,13 +18,17 @@
   </head>
 
   <body>
-  <% if ["public", "devise"].include?(controller.controller_name) %>
-    <header>
-  <%= render "shared/navbar" %>
-  </header>
+  <% if ["dashboard"].include?(controller.controller_name) %>
+   
+    <div class="d-flex">
+     <%= render "shared/dashboard" %>
+  </div>
+  
   <% else%>
-  <h1 class="container text-center mt-4">Dashboard</h1>
-  <%= render "shared/dashboard-nav" %>
+   <header>
+  <%= render "shared/navbar" %>
+  
+  </header>
   <% end %>
  
 <div class="container">
