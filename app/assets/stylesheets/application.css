@@ -55,10 +55,6 @@ h1,h2,h3,h4,h5,h6 {
   margin-left: 150px;
 }
 
-.dashboard-main {
-  /* margin-left: 200px; */
-}
-
 .property-index {
   margin-top: 40px;
   text-align: center;
@@ -158,11 +154,16 @@ textarea:-ms-input-placeholder {
 button {
   outline: none!important;
   border: none;
-  background: 0 0
+  background: 0 0;
+  color: #666;
 }
 
 button:hover {
   cursor: pointer
+}
+
+.destroy-btn:hover {
+  color: #c80000;
 }
 
 iframe {

@@ -1,15 +1,32 @@
 <p style="color: green"><%= notice %></p>
-<div class="property-index">
-<h1 class="mt-4">Properties</h1>
+<div class="container-fluid">
+<h1 class="m-4 text-center">Properties</h1>
 
-<div id="properties">
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Address</th>
+      <th scope="col">Price</th>
+      <th scope="col">Rooms</th>
+      <th scope="col">Bathrooms</th>
+    </tr>
+  </thead>
+  <tbody>
   <% @properties.each do |property| %>
-    <%= render property %>
-    <p>
-      <%= link_to "Show this property", property %>
-    </p>
-  <% end %>
-</div>
+    <tr>
+      <td><%= property.name%></td>
+      <td><%= property.address%></td>
+      <td><%= property.price%></td>
+      <td><%= property.rooms%></td>
+      <td><%= property.bathrooms%></td>
+      <td><%= link_to "Show this property", property, class:"text-success text-decoration-none" %></td>
+      <td><%= link_to "Edit this property", edit_property_path(property), class:"text-primary text-decoration-none" %></td>
+      <td><%= button_to "Delete this property", @property, method: :delete, class:"destroy-btn text-decoration-none text-danger" %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= link_to "New property", new_property_path, class:"text-primary text-decoration-none" %>
 </div>
 
-<%= link_to "New property", new_property_path %>
