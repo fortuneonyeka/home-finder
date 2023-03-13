@@ -162,10 +162,6 @@ button:hover {
   cursor: pointer
 }
 
-.destroy-btn:hover {
-  color: #c80000;
-}
-
 iframe {
   border: none!important
 }

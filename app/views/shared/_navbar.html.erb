@@ -39,9 +39,9 @@
           <strong><%= current_account.first_name %></strong>
       </li>
     
-    <span class="navbar-text">
-      <%= button_to "LogOut", destroy_account_session_path, method: :delete, :class => "border-0 bg-transparent" %>
-    </span>
+    <li >
+      <%= button_to "LogOut", destroy_account_session_path, method: :delete, :class => "border-0 bg-transparent logout-btn nav-link" %>
+    </li>
     <% else%>
         <li class="nav-item  ">
           <%= link_to "Sign In", new_account_session_path, class: "nav-link"%>

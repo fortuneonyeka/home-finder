@@ -1,33 +1,33 @@
 <%= form_with(model: property) do |form| %>
- <%= render "shared/form-validations"%>
+ <%= render "shared/form-validations", item: @property%>
   <div class="container">
   <div class="form-group">
-    <%= form.label :name, style: "display: block" %>
+    <%= form.label :name, style: "display: block", class:"h4" %>
     <%= form.text_field :name, class:"form-control p-3" %>
   </div>
 
   <div class="form-group">
-    <%= form.label :address, style: "display: block" %>
+    <%= form.label :address, style: "display: block", class:"h4" %>
     <%= form.text_field :address, class:"form-control p-3" %>
   </div>
 
   <div class="form-group">
-    <%= form.label :price, style: "display: block" %>
+    <%= form.label :price, style: "display: block", class:"h4" %>
     <%= form.number_field :price , class:"form-control p-3"%>
   </div>
 
   <div class="form-group">
-    <%= form.label :rooms, style: "display: block" %>
+    <%= form.label :rooms, style: "display: block", class:"h4" %>
     <%= form.number_field :rooms, class:"form-control p-3" %>
   </div>
 
   <div class="form-group">
-    <%= form.label :bathrooms, style: "display: block" %>
+    <%= form.label :bathrooms, style: "display: block", class:"h4" %>
     <%= form.text_field :bathrooms, class:"form-control p-3" %>
   </div>
 
   <div class="form-group text-center">
-    <%= form.submit "Submit", class:"btn btn-lg btn-block btn-success mt-4 w-50" %>
+    <%= form.submit "Save Property", class:"btn btn-lg btn-block btn-success mt-4" %>
   </div>
   </div>
 <% end %>

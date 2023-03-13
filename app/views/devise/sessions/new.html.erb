@@ -1,4 +1,5 @@
 <div class="container text-center border-0 shadow-lg  bg-white bg-light rounded-5">
+<%= render "devise/shared/error_messages", resource: resource %>
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 <div class=" container wrap-login100">
 

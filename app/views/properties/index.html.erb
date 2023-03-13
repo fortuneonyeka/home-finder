@@ -21,12 +21,10 @@
       <td><%= property.rooms%></td>
       <td><%= property.bathrooms%></td>
       <td><%= link_to "Show this property", property, class:"text-success text-decoration-none" %></td>
-      <td><%= link_to "Edit this property", edit_property_path(property), class:"text-primary text-decoration-none" %></td>
-      <td><%= button_to "Delete this property", @property, method: :delete, class:"destroy-btn text-decoration-none text-danger" %></td>
     </tr>
     <% end %>
   </tbody>
 </table>
-<%= link_to "New property", new_property_path, class:"text-primary text-decoration-none" %>
+<%= link_to "New property", new_property_path, class:" btn btn-outline-success" %>
 </div>
 

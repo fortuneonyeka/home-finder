@@ -1,9 +1,9 @@
- <% if @property.errors.any? %>
+ <% if item.errors.any? %>
     <div class="text-danger mb-4">
-      <h2><%= pluralize(@property.errors.count, "error") %> prohibited this property from being saved:</h2>
+      <h2><%= pluralize(item.errors.count, "error") %> prohibited this property from being saved:</h2>
 
       <ul>
-        <% @property.errors.each do |error| %>
+        <% item.errors.each do |error| %>
           <li><%= error.full_message %></li>
         <% end %>
       </ul>

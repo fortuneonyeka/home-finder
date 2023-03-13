@@ -18,7 +18,7 @@
           <li class="nav-item">
             <a class="nav-link" href="#">
               <i data-feather="gift"></i>
-              Products
+              Viewings
             </a>
           </li>
           <li class="nav-item">
@@ -28,17 +28,12 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <%= link_to dashboard_reports_path, class:"nav-link" do%>
               <i data-feather="activity"></i>
               Reports
-            </a>
+            <%end%>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-                <i data-feather="server"></i>
-                Integrations
-            </a>
-          </li>
+          
         </ul>
 
         <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
@@ -57,21 +52,10 @@
           <li class="nav-item">
             <a class="nav-link" href="#">
                 <i data-feather="calendar"></i> 
-                Last quarter
+                Enggements
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <i data-feather="coffee"></i>
-              Social engagement
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <i data-feather="calendar"></i> 
-              Year-end sale
-            </a>
-          </li>
+         
         </ul>
       </div>
     </nav>

@@ -1,13 +1,10 @@
 <p style="color: green"><%= notice %></p>
 
-<div class="property-index">
-
+<div class="container">
 <%= render @property %>
-
 <div>
-  <%= link_to "Edit this property", edit_property_path(@property), class:"text-primary text-decoration-none" %> |
-  <%= link_to "Back to properties", properties_path, class:"text-primary text-decoration-none" %>
-
-  <%= button_to "Delete this property", @property, method: :delete, class:"destroy-btn text-danger" %>
+  <%= link_to "Edit property", edit_property_path(@property), class:"btn btn-outline-primary" %> 
+  <%= link_to "Cancel", properties_path, class:"btn btn-outline-secondary" %>
+  <%= button_to "Delete property", @property, method: :delete, class:" btn btn-outline-danger" %>
 </div>
 </div>
