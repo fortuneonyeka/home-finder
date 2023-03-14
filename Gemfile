@@ -3,8 +3,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "2.7.0"
 gem "devise"
-gem 'carrierwave', '~> 2.2', '>= 2.2.3'
-gem 'fog', '~> 2.3'
+gem 'carrierwave'
+gem 'mini_magick'
+gem "net-http"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.4", ">= 7.0.4.2"
@@ -59,6 +60,10 @@ end
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
+  gem 'listen', '~> 3.8'
+  gem 'spring-watcher-listen', '~> 2.1'
+  gem 'spring', '~> 4.1', '>= 4.1.1'
+  gem "figaro"
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
