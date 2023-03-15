@@ -1,10 +1,19 @@
-<p style="color: green"><%= notice %></p>
 
-<div class="container">
-<%= render @property %>
-<div>
-  <%= link_to "Edit property", edit_property_path(@property), class:"btn btn-outline-primary" %> 
-  <%= link_to "Cancel", properties_path, class:"btn btn-outline-secondary" %>
-  <%= button_to "Delete property", @property, method: :delete, class:" btn btn-outline-danger" %>
+
+<div class="container mt-4">
+<ul >
+<p>
+  <%= image_tag @property.image, style: "width:250px; display: block"%>
+  </p>
+<li class="mt-2">Property Name: <%= @property.name %></li>
+<li>Location: <%= @property.address %></li>
+<li>Price: $<%= @property.price %></li>
+<li>Rooms: <%= @property.rooms %></li>
+<li>Bathrooms: <%= @property.bathrooms %></li>
+</ul>
+<div class="d-flex">
+  <%= link_to "Edit Property", edit_property_path(@property), class:"btn btn-outline-primary" %> 
+  <%= button_to "Delete Property", @property, method: :delete, class:" btn btn-outline-danger mx-2" %>
+  <%= link_to "Home", properties_path, class:"btn btn-outline-secondary" %>
 </div>
 </div>

@@ -267,7 +267,7 @@ DEPENDENCIES
   importmap-rails
   jbuilder
   listen (~> 3.8)
-  mini_magick (~> 4.12)
+  mini_magick
   net-http
   pg (~> 1.1)
   puma (~> 5.0)

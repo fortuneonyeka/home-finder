@@ -21,6 +21,8 @@
       <td><%= property.rooms%></td>
       <td><%= property.bathrooms%></td>
       <td><%= link_to "Show this property", property, class:"text-success text-decoration-none" %></td>
+      <td>  <%= button_to "Delete property", property, method: :delete, class:" btn btn-outline-danger" %>
+</td>
     </tr>
     <% end %>
   </tbody>

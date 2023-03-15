@@ -4,11 +4,12 @@ class PropertiesController < ApplicationController
 
   # GET /properties or /properties.json
   def index
-    @properties = Property.all
+    @properties = Property.all.with_attached_image
   end
 
   # GET /properties/1 or /properties/1.json
   def show
+    @property = Property.find(params[:id])
   end
 
   # GET /properties/new
@@ -24,6 +25,7 @@ class PropertiesController < ApplicationController
   def create
     @property = Property.new(property_params)
     @property.account_id = current_account.id
+    @property.image.attach(params[:property][:image])
 
     respond_to do |format|
       if @property.save
@@ -67,6 +69,6 @@ class PropertiesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def property_params
-      params.require(:property).permit(:name, :address, :price, :rooms, :bathrooms, :photo, :photo_cache)
+      params.require(:property).permit(:name, :address, :price, :rooms, :bathrooms, :image)
     end
 end
