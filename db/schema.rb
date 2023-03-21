@@ -70,8 +70,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_15_074746) do
     t.bigint "account_id"
     t.string "description"
     t.string "address"
+    t.string "email"
     t.integer "price"
     t.integer "rooms"
+    t.integer "phone"
     t.string "bathrooms"
     t.string "image"
     t.datetime "created_at", null: false

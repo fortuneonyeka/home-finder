@@ -4,6 +4,8 @@ class Property < ApplicationRecord
   belongs_to :account
 
   validates :description ,presence: true
+  validates :phone ,presence: true
+  validates :email ,presence: true
   validates :address ,presence: true
   validates :price ,presence: true
   validates :rooms ,presence: true
