@@ -1,0 +1,10 @@
+<% @properties.each do |property| %>
+ <div class="col-3">
+ <%= image_tag property.image, style: "width:500px; display: block"%>
+ <div class="d-flex flex-direction-column">
+  Property Name: <%= property.name%> |
+  Location: <%= property.address%> |
+  Rooms Ensuit: <%= property.rooms%>
+ </div>
+
+<% end %>

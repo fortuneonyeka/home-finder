@@ -5,15 +5,15 @@
 <p>
   <%= image_tag @property.image, style: "width:500px; display: block"%>
   </p>
-<li class="mt-2">Property Name: <%= @property.name %></li>
-<li>Location: <%= @property.address %></li>
-<li>Price: $<%= @property.price %></li>
-<li>Rooms: <%= @property.rooms %></li>
-<li>Bathrooms: <%= @property.bathrooms %></li>
+<li class="mt-2"><p>Location: <%= @property.address %></p></li>
+<li><p>Price: N<%= @property.address %></p><li>
+<li><p>Rooms: <%= @property.rooms %></p><li>
+<li><p>Bathrooms: <%= @property.bathrooms %></p></li>
+<li ><p>Description: <%= @property.description %></p></li>
 </ul>
 <div class="d-flex">
   <%= link_to "Edit Property", edit_property_path(@property), class:"btn btn-outline-primary" %> 
   <%= button_to "Delete Property", @property, method: :delete, class:" btn btn-outline-danger mx-2" %>
-  <%= link_to "Home", properties_path, class:"btn btn-outline-secondary" %>
+  <%= link_to "Properties", properties_path, class:"btn btn-outline-secondary" %>
 </div>
 </div>

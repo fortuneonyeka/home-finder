@@ -5,7 +5,7 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th scope="col">Name</th>
+      <th scope="col">Descrption</th>
       <th scope="col">Address</th>
       <th scope="col">Price</th>
       <th scope="col">Rooms</th>
@@ -15,11 +15,11 @@
   <tbody>
   <% @properties.each do |property| %>
     <tr>
-      <td><%= property.name%></td>
       <td><%= property.address%></td>
       <td><%= property.price%></td>
       <td><%= property.rooms%></td>
       <td><%= property.bathrooms%></td>
+      <td><%= property.description%></td>
       <td><%= link_to "Show this property", property, class:"text-success text-decoration-none" %></td>
       <td>  <%= button_to "Delete Property", property, method: :delete, class:"text-danger text-decoration-none " %>
 </td>
