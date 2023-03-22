@@ -12,8 +12,11 @@
       <th scope="col">Bathrooms</th>
     </tr>
   </thead>
+        <h2><%= "#{current_account.first_name} You have #{current_account.properties.count} properties" %></h2> <hr>
   <tbody>
   <% @properties.each do |property| %>
+      <% if current_account == property.account %>
+
     <tr>
       <td><%= property.description%></td>
       <td><%= property.address%></td>
@@ -21,12 +24,11 @@
       <td><%= property.rooms%></td>
       <td><%= property.bathrooms%></td>
       <td><%= link_to "Show this property", property, class:"text-success text-decoration-none" %></td>
-      <% if current_account == property.account %>
       <td>  <%= button_to "Delete Property", property, method: :delete, class:"text-danger text-decoration-none " %>
-      <% end %>
 </td>
     </tr>
     <% end %>
+      <% end %>
   </tbody>
 </table>
 <%= link_to "New property", new_property_path, class:" btn btn-outline-success" %>
