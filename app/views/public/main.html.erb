@@ -34,12 +34,12 @@
         <div class="col">
           <div class="card shadow-sm">
             
-                <%= image_tag property.image, style: "width:419px; height: 300px"%>
+                <%= image_tag property.image, style: "width:419px; height: 300px" %>
                
             <div class="card-body">
               <p class="card-text"><%= property.description%></p>
               <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
+                <div class="btn-group mt-2">
                   <%= link_to "View", property, class:"btn btn-outline-secondary" %>
                 </div>
                 <small class="text-muted"><%= property.created_at.strftime("%B %d %Y, %l:%M%P")%></small>

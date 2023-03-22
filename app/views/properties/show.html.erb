@@ -11,9 +11,11 @@
 <li ><p>Contact Phone: <%= @property.phone %></p></li>
 <li ><p>Contact Email: <%= @property.email %></p></li>
 </ul>
-<div class="d-flex">
+<div class="d-flex mt-4">
+<% if current_account == @property.account %>
   <%= link_to "Edit Property", edit_property_path(@property), class:"btn btn-outline-primary" %> 
   <%= button_to "Delete Property", @property, method: :delete, class:" btn btn-outline-danger mx-2" %>
+  <% end %>
   <%= link_to "Properties", properties_path, class:"btn btn-outline-secondary" %>
 </div>
 </div>

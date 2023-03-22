@@ -21,7 +21,9 @@
       <td><%= property.rooms%></td>
       <td><%= property.bathrooms%></td>
       <td><%= link_to "Show this property", property, class:"text-success text-decoration-none" %></td>
+      <% if current_account == property.account %>
       <td>  <%= button_to "Delete Property", property, method: :delete, class:"text-danger text-decoration-none " %>
+      <% end %>
 </td>
     </tr>
     <% end %>
