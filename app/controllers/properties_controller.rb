@@ -1,6 +1,6 @@
 class PropertiesController < ApplicationController
   before_action :set_property, only: [ :show, :edit, :update, :destroy ]
-  before_action :authenticate_account!, only: [:new, :create, :update, :destroy, :edit]
+  before_action :authenticate_account!, only: [:new, :create, :update, :destroy, :edit, :show]
 
   # GET /properties or /properties.json
   def index
@@ -9,7 +9,8 @@ class PropertiesController < ApplicationController
 
   # GET /properties/1 or /properties/1.json
   def show
-    @property = Property.find(params[:id])
+    # the @property instance variable has already been set by the set_property method
+    # @property = Property.find(params[:id])
   end
 
   # GET /properties/new
@@ -19,6 +20,7 @@ class PropertiesController < ApplicationController
 
   # GET /properties/1/edit
   def edit
+    # the @property instance variable has already been set by the set_property method
   end
 
   # POST /properties or /properties.json
